@@ -57,3 +57,55 @@ class supplier{
         void remove_supplier();
 
 };
+
+class order{
+        int id; //pk
+        int book_id; //fk book
+        int supplier_id; //fk suppliers
+        int qty;
+        date order_date;
+        int eta;
+        char received;
+        int inv;
+
+    public:
+        void new_order();
+        void view();
+        void mark_canceled();
+        void mark_received();
+}
+
+class employee{
+        int id; //pk
+        string name;
+        string addr_line1;
+        string addr_line2;
+        string addr_city;
+        string addr_state;
+        long int phn;
+        date date_of_joining;
+        long int salary;
+    public:
+        void add_employee();
+        void search_employee();
+        void assign_mgr_stat();
+        void display();
+        void update_salary();
+};
+
+class member{
+        int id;//pk
+        string name;
+        string addr_line1;
+        string addr_line2;
+        string addr_city;
+        string addr_state;
+        long int phn;
+        date beg_date;
+        bool valid;
+    public:
+        void add_member();
+        void refresh();
+        void search_member();
+};
+
